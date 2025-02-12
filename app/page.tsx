@@ -34,31 +34,22 @@ function ApodImage() {
   if (isLoading) return <p>Loading...</p>
   if (!data) return <p>No data</p>
   return (
-       <Image
-        src={data.hdurl}
-        alt={data.title}
-        fill={true}
-      />
+    <>
+      <h1>{data.title}</h1>  
+        <Image
+          src={data.hdurl}
+          alt={data.title}
+          width={1000}
+          height={1000}
+        />
+    </>
   )
 }
 
 export default function Home() {
   return (
     <>
-    <div className="flex flex-col items-center p-7 rounded-2xl">  
-      <div className='m-10'>    
         <ApodImage></ApodImage>
-      </div>  
-      <div className="flex">    
-        <span className="text-2" >Class Warfare</span>
-        <span>The Anti-Patterns</span> 
-        <span className="flex">
-          <span>No. 4</span>      
-          <span>·</span>      
-          <span>2025</span>    
-        </span>  
-      </div>
-    </div>
     </>
   );
 }
