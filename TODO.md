@@ -1,0 +1,3 @@
+- Layout com Tailwind
+- Passar para Tipagem com TS (tsx)
+- Renderizar no back e puxar do front
